@@ -1,0 +1,17 @@
+{
+  "0": "affirm",
+  "1": "ask_accommodations_by_type",
+  "2": "ask_attractions_by_city",
+  "3": "ask_attractions_by_type",
+  "4": "ask_general_accommodations",
+  "5": "ask_general_attractions",
+  "6": "ask_general_restaurants",
+  "7": "ask_restaurants_by_type",
+  "8": "bot_challenge",
+  "9": "choose_all_accommodations",
+  "10": "choose_all_attractions",
+  "11": "choose_all_restaurants",
+  "12": "goodbye",
+  "13": "greet",
+  "14": "thank_you"
+}

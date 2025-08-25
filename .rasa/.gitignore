@@ -1,0 +1,29 @@
+echo "# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Rasa
+models/
+results/
+logs/
+.rasa/
+.rasa/cache/
+.rasa/tmp/
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+*.env
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+" > .gitignore

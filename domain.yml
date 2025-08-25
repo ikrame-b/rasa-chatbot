@@ -1,0 +1,110 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - ask_general_attractions
+  - choose_all_attractions
+  - ask_attractions_by_city
+  - ask_attractions_by_type
+  - bot_challenge
+  - nlu_fallback
+  - ask_general_accommodations
+  - choose_all_accommodations
+  - ask_accommodations_by_type
+  - ask_general_restaurants
+  - choose_all_restaurants
+  - ask_restaurants_by_type
+
+slots:
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: city
+
+  type_attraction:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: type_attraction
+  type_restaurant:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: type_restaurant
+  type_accommodation:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: type_accommodation
+
+entities:
+  - city
+  - type_attraction
+  - type_restaurant
+  - type_accommodation
+
+responses:
+  utter_greet:
+    - text: "Welcome! I'm here to help you explore the best of the region. What would you like to know?"
+
+  utter_goodbye:
+    - text: "Okay Bye! Have a nice day. And if you have any more questions, feel free to ask."
+
+  utter_attraction_question:
+  - text: "Drâa-Tafilalet is full of amazing places to explore — from natural landscapes to cultural and historical sites.\nWould you like to see all kinds of attractions, or are you interested in a specific type?"
+
+  utter_all_attraction:
+  - text: |
+      Great! I recommend visiting:
+
+      Ksar Aït Benhaddou - a UNESCO World Heritage site
+
+      The old medina of Rissani
+
+      Traditional kasbahs in Tinghir and Skoura
+
+  utter_ask_attractions:
+  - text: "Here are some {type_attraction} attractions you can visit in Drâa-Tafilalet."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_thanks:
+  - text: "You're welcome! If you have any more questions, feel free to ask."
+
+  utter_more_attractions:
+  - text: "Do you want to see more attractions? You can ask about specific types of attractions or cities, or just say 'show me everything' to see all the attractions in Drâa-Tafilalet."
+
+  utter_specify_attractions:
+  - text: "Please specify the type of attractions you're interested in, like natural, cultural sites, or just mention a city which you want."
+
+  utter_default:
+    - text: "I'm sorry, I didn't understand that. Please ask me a question about attractions or tourism in the Drâa-Tafilalet region."
+
+
+  utter_accommodation_question:
+  - text: "Would you like to see all kinds of accommodations, or are you interested in a specific type?"
+
+actions:
+  - action_get_all_attractions
+  - action_get_attractions_by_type
+  - action_get_random_attractions
+  - action_get_all_hotels
+  - action_get_random_accommodations
+  - action_get_accommodations_by_type
+  - action_get_random_hotels
+  - action_get_all_restaurants
+  - action_get_restaurants_by_type
+  - action_get_random_restaurants
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

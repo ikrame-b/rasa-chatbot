@@ -1,0 +1,330 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - hi there
+    - hello there
+    - greetings
+    - good morning
+    - good afternoon
+    - good evening
+    - hey dude
+    - let's go
+    - goodmorning
+    - goodevening
+    - moin
+
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see you later
+    - catch you later
+    - talk to you later
+    - have a nice day
+    - take care
+    - see you soon
+    - later
+    - farewell
+    - bye-bye
+    - by
+    - bye-bye
+    - c u
+    - thanks
+    - thank you!
+    - thanks a lot
+    - thank you
+    - thank you! very much
+    - I appreciate it
+    - that's helpful
+    - thanks for your help
+    - thanks for the info
+    - I appreciate your assistance
+    - that was useful
+
+# -------------------------
+# Intentions pour des affirmations
+# -------------------------
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+# -----------------------------------------------------------
+# Poser des question sur des attractions d'une façon générale
+# -----------------------------------------------------------
+
+- intent: ask_general_attractions
+  examples: |
+    - What can I visit in Drâa-Tafilalet?
+    - Where can I go in the region?
+    - Places to explore?
+    - Top attractions in the region
+    - Show me places to visit in the region
+    - What can I explore in Drâa-Tafilalet?
+    - Tell me something to do in the area
+    - What's worth visiting around here?
+    - Any places you'd recommend for sightseeing?
+    - Can you suggest some attractions?
+    - What to see?
+    - Places to visit?
+    - What can I explore as a tourist in Drâa-Tafilalet?
+    - What are some must-see spots in the region?
+    - What are the main attractions in Drâa-Tafilalet?
+
+# ------------------------------------------------------------------
+# Réponder à la question en choisissant tous les types d'attractions
+# ------------------------------------------------------------------
+
+- intent: choose_all_attractions
+  examples: |
+    - I'd like to see them all
+    - Show me everything
+    - All kinds of attractions please
+    - Everything sounds good
+    - Surprise me, any attraction works
+    - Just show me all attractions
+    - I want to see all types of attractions
+    - I'm open to any attractions
+    - I want to explore all attractions
+
+# ------------------------------------------------
+# Poser des question sur des attractions par ville
+# ------------------------------------------------
+
+- intent: ask_attractions_by_city
+  examples: |
+    - What can I visit in [Ouarzazate](city)?
+    - Are there any attractions in [Errachidia](city)?
+    - Recommend something to see in [Zagora](city)
+    - I'm visiting [Tinghir](city), what should I see?
+    - Tourist sites in [Rissani](city)?
+    - In [Erfoud](city).
+    - [Errachidia](city)
+    - What to do in [Ouarzazate](city)?
+    - Are there any attractions in [Zagora](city)?
+    - What can I explore in [Rissani](city)?
+    - What are the attractions in [Tinghir](city)?
+    - Show me what to do in [Erfoud](city)
+
+# -----------------------------------------------
+# Poser des question sur des attractions par type
+# -----------------------------------------------
+
+- intent: ask_attractions_by_type
+  examples: |
+    - What are the [natural](type_attraction) attractions in Drâa-Tafilalet?
+    - Show me [cultural](type_attraction) places to visit
+    - In the region, what are the [natural](type_attraction) attractions?
+    - Are there any [historical](type_attraction) sites in the region?
+    - I'm interested in [artificial](type_attraction) attractions
+    - Suggest some [cultural](type_attraction) monuments to visit
+    - What are the [historical](type_attraction) sites in Drâa-Tafilalet?
+    - Can you list some [cultural](type_attraction) attractions?
+    - What are the [artificial](type_attraction) attractions in the region?
+    - What are the [natural](type_attraction) attractions in the region?
+    - [Cultural](type_attraction) attractions please.
+    - What are the [cultural](type_attraction) attractions in Drâa-Tafilalet?
+
+# -------------------------
+# Les synonymes
+# -------------------------
+
+- synonym: cultural
+  examples: |
+    - cultural
+    - culture
+    - culturelles
+
+- synonym: natural
+  examples: |
+    - natural
+    - naturelles
+
+- synonym: historical
+  examples: |
+    - historical
+    - historiques
+
+- synonym: artificial
+  examples: |
+    - artificial
+    - artificielles
+
+- synonym: cafes
+  examples: |
+    - cafe
+    - coffee shops
+    - coffeehouses
+    - cafés
+
+- synonym: restaurants
+  examples: |
+    - restaurant
+    - eateries
+    - dining places
+    - food spots
+    - food places
+    - dining options
+
+- synonym: hotels
+  examples: |
+    - hotel
+    - lodgings
+    - accommodations
+    - motels
+
+- synonym: guesthouses
+  examples: |
+    - guesthouse
+    - inns
+    - hostels
+
+- synonym: lodges
+  examples: |
+    - lodge
+    - cabins
+    - chalets
+    - bungalows
+    - cottages
+
+# -------------------------
+
+# -------------------------
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+# -------------------------
+# Dire merci
+# -------------------------
+
+- intent: thank_you
+  examples: |
+    - thank you
+    - thanks
+    - thanks a lot
+    - I appreciate it
+    - that's helpful
+    - thanks for your help
+    - thanks for the info
+    - I appreciate your assistance
+    - that was useful
+    - thank you very much
+    - thank you so much
+    - many thanks
+    - thanks for your help
+
+# -------------------------
+# Poser des question sur des hébergements d'une façon générale
+# -------------------------
+- intent: ask_general_accommodations
+  examples: |
+    - What hotels are available in Drâa-Tafilalet?
+    - Are there any accommodations in the region?
+    - Where can I stay in the area?
+    - Can you suggest some hotels?
+    - What are the lodging options in Drâa-Tafilalet?
+    - Show me places to stay in the region
+    - What can I book for accommodation?
+    - Any recommendations for hotels or lodgings?
+    - What are the best places to stay in the region?
+
+# -------------------------
+# Réponder à la question en choisissant tous les types d'hébergements
+# -------------------------
+- intent: choose_all_accommodations
+  examples: |
+    - All kinds of accommodations please
+    - Surprise me, any accommodation works
+    - Just show me all accommodations
+    - I want to see all types of accommodations
+    - I'm open to any accommodations
+    - I want to explore all accommodations
+
+# -------------------------
+# Poser des question sur des hébergements par type
+# -------------------------
+- intent: ask_accommodations_by_type
+  examples: |
+    - What are the [hotels](type_accommodation) in Drâa-Tafilalet?
+    - Are there any [guesthouses](type_accommodation) in the region?
+    - Can you suggest some [hostels](type_accommodation)?
+    - What are the [lodges](type_accommodation) available?
+    - Show me [hotels](type_accommodation) in the area
+    - What are the [hotels](type_accommodation) in the region?
+    - Are there any [guesthouses](type_accommodation) in Drâa-Tafilalet?
+    - Can you list some [hostels](type_accommodation)?
+    - What are the [lodges](type_accommodation) in the region?
+
+
+# -------------------------
+# Poser des question sur des restaurations d'une façon générale
+# -------------------------
+- intent: ask_general_restaurants
+  examples: |
+    - What restaurants are available in Drâa-Tafilalet?
+    - Are there any dining options in the region?
+    - Where can I eat in the area?
+    - Can you suggest some restaurants?
+    - What are the dining options in Drâa-Tafilalet?
+    - Show me places to eat in the region
+    - What can I book for dining?
+    - Any recommendations for restaurants or eateries?
+    - What are the best places to eat in the region?
+
+# -------------------------
+# Réponder à la question en choisissant tous les types de restaurants
+# -------------------------
+- intent: choose_all_restaurants
+  examples: |
+    - Yes, I want to see them all
+    - Show me everything
+    - All kinds of restaurants please
+    - Everything sounds good
+    - Surprise me, any restaurant works
+    - Just show me all restaurants
+    - I want to see all types of restaurants
+    - I'm open to any restaurants
+    - I want to explore all restaurants
+
+# -------------------------
+# Poser des question sur des restaurations par type
+# -------------------------
+- intent: ask_restaurants_by_type
+  examples: |
+    - What are the [restaurants](type_restaurant) in Drâa-Tafilalet?
+    - Are there any [cafes](type_restaurant) in the region?
+    - Can you suggest some [cafes](type_restaurant)?
+    - What are the [cafes](type_restaurant) options available?
+    - Show me [restaurants](type_restaurant) places in the area
+    - What are the [restaurants](type_restaurant) in the region?
+    - Are there any [cafes](type_restaurant) in Drâa-Tafilalet?
+    - Can you list some [restaurants](type_restaurant)?
+    - What are the [restaurants](type_restaurant) options in the region?
+
+
+# -------------------------
+
+# -------------------------
+
+
+
+# -------------------------
+
+# -------------------------

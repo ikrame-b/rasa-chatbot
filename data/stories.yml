@@ -1,0 +1,50 @@
+version: "3.1"
+
+stories:
+
+- story: simple conversation
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: goodbye
+    - action: utter_goodbye
+
+
+
+- story: Ask about all attractions
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_general_attractions
+    - action: utter_attraction_question
+    - intent: choose_all_attractions
+    - action: action_get_random_attractions
+
+- story: ask about attractions by type
+  steps:
+    - intent: ask_attractions_by_type
+    - action: action_get_attractions_by_type
+
+- story: show all attractions story
+  steps:
+    - intent: choose_all_attractions
+    - action: action_get_random_attractions
+
+- story: Ask about all accommodation
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_general_accommodations
+    - action: utter_accommodation_question
+    - intent: choose_all_accommodations
+    - action: action_get_random_accommodations
+
+- story: ask about accommodation by type
+  steps:
+    - intent: ask_accommodations_by_type
+    - action: action_get_accommodations_by_type
+
+- story: show all accommodation story
+  steps:
+    - intent: choose_all_accommodations
+    - action: action_get_random_accommodations

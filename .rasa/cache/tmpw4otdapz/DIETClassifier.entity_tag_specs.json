@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-city",
+      "2": "I-city",
+      "3": "L-city",
+      "4": "U-city",
+      "5": "B-type_accommodation",
+      "6": "I-type_accommodation",
+      "7": "L-type_accommodation",
+      "8": "U-type_accommodation",
+      "9": "B-type_attraction",
+      "10": "I-type_attraction",
+      "11": "L-type_attraction",
+      "12": "U-type_attraction",
+      "13": "B-type_restaurant",
+      "14": "I-type_restaurant",
+      "15": "L-type_restaurant",
+      "16": "U-type_restaurant",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-city": 1,
+      "I-city": 2,
+      "L-city": 3,
+      "U-city": 4,
+      "B-type_accommodation": 5,
+      "I-type_accommodation": 6,
+      "L-type_accommodation": 7,
+      "U-type_accommodation": 8,
+      "B-type_attraction": 9,
+      "I-type_attraction": 10,
+      "L-type_attraction": 11,
+      "U-type_attraction": 12,
+      "B-type_restaurant": 13,
+      "I-type_restaurant": 14,
+      "L-type_restaurant": 15,
+      "U-type_restaurant": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
