@@ -24,6 +24,8 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Exposer le port dynamique ($PORT fourni par Railway)
 EXPOSE $PORT
+EXPOSE 5055
+EXPOSE 5005
 
 # Lancer supervisord
 CMD ["/usr/bin/supervisord"]
