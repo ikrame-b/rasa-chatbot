@@ -22,8 +22,8 @@ RUN mkdir -p /var/log/supervisor
 # Copier la config supervisord
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Exposer les ports (5005 = Rasa, 5055 = Actions)
-EXPOSE 5005 5055
+# Exposer le port dynamique ($PORT fourni par Railway)
+EXPOSE $PORT
 
 # Lancer supervisord
 CMD ["/usr/bin/supervisord"]
