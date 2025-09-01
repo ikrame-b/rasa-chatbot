@@ -59,9 +59,12 @@ class ActionGetAllAttractions(Action):
                 if not data:
                     dispatcher.utter_message(text="No attraction is found.")
                 else:
-                    attractions = [item.get("name", "Inconnue") for item in data][:5]
-                    msg = "Here are some avialable attractions  :\n" + "\n".join(f"- {name}" for name in attractions)
-                    dispatcher.utter_message(text=msg)
+
+                    dispatcher.utter_message(text="Here are some available attractions:")
+
+                    attractions = data[:5]
+
+                    dispatcher.utter_message(json_message={attractions})
             else:
                 dispatcher.utter_message(text="Error while recupering attractions.")
         except Exception as e:
@@ -102,10 +105,20 @@ class ActionGetRandomAttractions(Action):
             sample_size = min(5, len(data))
             random_attractions = random.sample(data, sample_size)
 
-            names = [item.get("name", "Sans nom") for item in random_attractions]
+            dispatcher.utter_message(text="Here are some attractions to discover :")
 
-            msg = "Here are some attractions to discover :\n" + "\n".join(f"- {n}" for n in names)
-            dispatcher.utter_message(text=msg)
+            attractions = data[:5]
+
+            attractions = [
+                {
+                    "name": attr.get("name", "Unknown"),
+                    "description": attr.get("description", "No description available."),
+                    "image": attr.get("images", [None])[0]
+                }
+                for attr in random_attractions
+            ]
+
+            dispatcher.utter_message(json_message={"attractions": random_attractions})
 
         except Exception as e:
             print(f"[ERREUR] Appel API : {e}")
